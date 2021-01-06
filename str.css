@@ -87,7 +87,7 @@ margin: 0;
 padding: 0;
 } */
 
-ul {
+ul{
 	 margin-left: 5%;
 	 font: 1.0em Arial, Helvetica, sans-seri;
 	 first
@@ -167,3 +167,13 @@ text-decoration: underline;
 }
 
 
+.jQuerty{
+	width: 200px;
+	margin: auto;
+}
+
+button{
+	padding: 5px;
+	background-color: #FFA07A;
+	border-radius: 5pc;
+}

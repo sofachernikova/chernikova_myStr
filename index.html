@@ -4,6 +4,19 @@
 	<title>Черникова С.К.</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="str.css" type="text/css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("table").hide();
+    });
+    $("#show").click(function(){
+        $("table").show();
+    });
+});
+</script>
+
 </head>
 <style>
 	body {
@@ -114,6 +127,13 @@
 			    <td>90 - ...</td>
 		    </tr>
 	</table>
+			<br>	
+	<div class="jQuerty">
+		<button id="hide">Скрыть таблицу</button><br><br>
+		<button id="show">Показать таблицу</button>
+	</div>
+
+		<br>
 	    <h2 class="hh">Персонажи из м/ф "Винни Пух"</h2>
 		    <ul>
 		    	<li>Медвежонок Винни</li>
