@@ -39,6 +39,11 @@ $(document).ready(function(){
 	// Изменить цвет фона абзацев
 	$("#changeColorParagraf").click(function(){
         $("p").css("background-color", "orange");
+	});
+	
+	// Add toggle class
+	$("#flip").click(function(){
+        $("#panel").slideToggle("slow");
     });
 });
 
@@ -62,6 +67,21 @@ $(document).ready(function(){
 
 	.blue {
 		color: blue;
+	}
+
+	#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5baba;
+	border: solid 1px black;
+	margin: auto;
+	}
+
+	#panel {
+		padding: 50px;
+		display: none;
+		margin: auto;
+		font: 1.6em Arial;
 	}
 </style> <!--ВНЕДРЕННЫЙ СТИЛЬ-->
 <body>
@@ -189,7 +209,9 @@ $(document).ready(function(){
 			<P style="background-color: green;">Абзац 3</P>
 			<P style="background-color: blue;">Абзац 4</P>
 			<button id="changeColorParagraf">Изменить фон абзацев</button>
-		</div>
+		</div><br>
+		<div id="flip">Кликни, чтобы увидеть мою электронную почту! (чтобы скрыть, кликни повторно)</div>
+		<div id="panel">sofa.chernikova@mail.ru</div>
 			<br><br>
 	</body>
 </html>
