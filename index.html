@@ -7,6 +7,8 @@
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+
+// Скрыть/показать таблицу
 $(document).ready(function(){
     $("#hide").click(function(){
         $("table").hide();
@@ -15,6 +17,14 @@ $(document).ready(function(){
         $("table").show();
     });
 });
+
+// Добавить элемент в конец списка
+$(document).ready(function(){
+	$("#addListItem").click(function(){
+			$("ul").append("<li>Новый элемент списка</li>");
+		});
+	});
+
 </script>
 
 </head>
@@ -142,7 +152,8 @@ $(document).ready(function(){
 		    	<li>Кристофер Робин</li>
 		    	<li>Ушастик</li>
 		    	<li>Ренга и Ру</li>
-		    </ul>
+			</ul>
+			<button id="addListItem" style="margin-left: 7%;">Добавить элемент в конец списка</button>
 		    <br>
 		    	<a style="text-align: center;" href="tablefree.html"><h2>Ссылка на двухколончатую форму</h2></a>
 		    <br> <!--ВСТРОЕННЫЙ СТИЛЬ-->
