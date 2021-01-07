@@ -44,7 +44,10 @@ $(document).ready(function(){
 	// Add toggle class
 	$("#flip").click(function(){
         $("#panel").slideToggle("slow");
-    });
+	});
+	
+	// Поиск всех элементов <span> в абзацах <p> и их перекраска в красный цвет
+	$( "h4" ).find( "span" ).css( "color", "red" );
 });
 
 </script>
@@ -212,6 +215,10 @@ $(document).ready(function(){
 		</div><br>
 		<div id="flip">Кликни, чтобы увидеть мою электронную почту! (чтобы скрыть, кликни повторно)</div>
 		<div id="panel">sofa.chernikova@mail.ru</div>
+		<div style="width: 90%; margin: auto;">
+			<h2 style="text-decoration: none;">В следующем тексте есть несколько слов, выделенных тегом span. Эти слова выделены синим цветом.</h2>
+			<h4 style="width: 100%; margin: auto;">Lorem ipsum dolor sit amet consectetur <span> adipisicing </span>elit. Quidem suscipit vitae officia iure ratione iusto optio doloribus illo nemo delectus <span>illum</span>, sit architecto cum doloremque aut maiores voluptas. Beatae soluta <span>cumque</span> deserunt expedita sapiente nisi quo asperiores voluptates est eius officia dolores possimus, odio aut adipisci vitae. A veritatis tempore accusamus iste eum ipsum mollitia cumque <span>quos</span> dicta ullam. Cumque dolore magni voluptatem, porro vel necessitatibus, dolorum non sed <span>reprehenderit</span>, voluptates placeat obcaecati neque velit accusantium? Error repellat aut rem quisquam est illo quia rerum at soluta, dolorem eius veniam quo neque non incidunt perspiciatis ipsum reprehenderit cum. <span>Libero</span>, impedit?</h4>
+		</div>
 			<br><br>
 	</body>
 </html>
