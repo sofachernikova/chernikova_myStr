@@ -8,22 +8,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-// Скрыть/показать таблицу
 $(document).ready(function(){
+
+	// Скрыть/показать таблицу
     $("#hide").click(function(){
         $("table").hide();
     });
     $("#show").click(function(){
         $("table").show();
-    });
-});
-
-// Добавить элемент в конец списка
-$(document).ready(function(){
-	$("#addListItem").click(function(){
-			$("ul").append("<li>Новый элемент списка</li>");
-		});
 	});
+	
+	// Добавить элемент в начало списка -> по умолчанию станет белого цвета
+	$("#addListItem1").click(function(){
+			$("ul").prepend("<li>Новый элемент списка</li>");
+	});
+
+	// Добавить элемент в конец списка
+	$("#addListItem2").click(function(){
+			$("ul").append("<li>Новый элемент списка</li>");
+	});
+});
 
 </script>
 
@@ -153,7 +157,8 @@ $(document).ready(function(){
 		    	<li>Ушастик</li>
 		    	<li>Ренга и Ру</li>
 			</ul>
-			<button id="addListItem" style="margin-left: 7%;">Добавить элемент в конец списка</button>
+			<button id="addListItem1" style="margin-left: 7%;">Добавить элемент в начало списка</button><br><br>
+			<button id="addListItem2" style="margin-left: 7%;">Добавить элемент в конец списка</button>
 		    <br>
 		    	<a style="text-align: center;" href="tablefree.html"><h2>Ссылка на двухколончатую форму</h2></a>
 		    <br> <!--ВСТРОЕННЫЙ СТИЛЬ-->
