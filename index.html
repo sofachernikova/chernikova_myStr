@@ -20,12 +20,12 @@ $(document).ready(function(){
 	
 	// Добавить элемент в начало списка -> по умолчанию станет белого цвета
 	$("#addListItem1").click(function(){
-			$("ul").prepend("<li>Новый элемент списка</li>");
+			$("ul.change").prepend("<li>Новый элемент списка</li>");
 	});
 
 	// Добавить элемент в конец списка
 	$("#addListItem2").click(function(){
-			$("ul").append("<li>Новый элемент списка</li>");
+			$("ul.change").append("<li>Новый элемент списка</li>");
 	});
 
 	// Изменить/вернуть цвет текста (h4)
@@ -34,6 +34,11 @@ $(document).ready(function(){
 	});
 	$("#changeStyleBack").click(function(){
         $("h4").removeClass("blue");
+	});
+	
+	// Изменить цвет фона абзацев
+	$("#changeColorParagraf").click(function(){
+        $("p").css("background-color", "orange");
     });
 });
 
@@ -165,7 +170,7 @@ $(document).ready(function(){
 
 		<br>
 	    <h2 class="hh">Персонажи из м/ф "Винни Пух"</h2>
-		    <ul>
+		    <ul class="change">
 		    	<li>Медвежонок Винни</li>
 		    	<li>Хрюня</li>
 		    	<li>Тигруля</li>
@@ -176,7 +181,15 @@ $(document).ready(function(){
 			<button id="addListItem1" style="margin-left: 7%;">Добавить элемент в начало списка</button><br><br>
 			<button id="addListItem2" style="margin-left: 7%;">Добавить элемент в конец списка</button>
 		    <br>
-		    	<a style="text-align: center;" href="tablefree.html"><h2>Ссылка на двухколончатую форму</h2></a>
-		    <br> <!--ВСТРОЕННЫЙ СТИЛЬ-->
+		    	<a style="text-align: center;" href="tablefree.html"><h2>Ссылка на двухколончатую форму</h2></a> <!--ВСТРОЕННЫЙ СТИЛЬ-->
+		<div style="width: 90%; margin: auto;">
+			<h2 style="text-decoration: none;">Абзаци:</h2>
+			<P style="background-color: red;">Абзац 1</P>
+			<P style="background-color: yellow;">Абзац 2</P>
+			<P style="background-color: green;">Абзац 3</P>
+			<P style="background-color: blue;">Абзац 4</P>
+			<button id="changeColorParagraf">Изменить фон абзацев</button>
+		</div>
+			<br><br>
 	</body>
 </html>
