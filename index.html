@@ -50,9 +50,10 @@ $(document).ready(function(){
 	$( "h4" ).find( "span" ).css( "color", "blue" );
 
 	// Изменение цвета фона абзаца при наведении
-	$( this ).slideUp();
+	$( "this" ).slideUp();
 
-	// 
+	// Добавление опр. слова к какому-либо тегу (<b>) 
+	$( "td.heIs" ).prepend( "<b>Он </b>" );
 });
 
 </script>
@@ -99,7 +100,8 @@ $(document).ready(function(){
 	p:hover {
 		background: orange;
 		transition: all 0.8s ease 0s;
-  }
+	}
+
 </style> <!--ВНЕДРЕННЫЙ СТИЛЬ-->
 <body>
 	<br>
@@ -153,47 +155,47 @@ $(document).ready(function(){
 			    <th>З.П. ПО МОСКВЕ</th>
 		    </tr>
 		    <tr>
-			    <td>Проектировщик</td>
+				<td class="heIs">Проектировщик</td>
 			    <td>ТЗ с проектом, прототип.</td>
 			    <td>знает все + юзабилити.</td>
 			    <td>80 - 100 т.р.</td>
 		    </tr>
 		    <tr>
-			    <td>Веб - дизайнер</td>
+			    <td class="heIs">Веб - дизайнер</td>
 			    <td>psd/figma (tilda).</td>
 			    <td>графический дизайн и инструменты + юзабилити, html, css.</td>
 			    <td>60 - 150 т.р.</td>
 		    <tr>
 
-			    <td>HTML - верстальщик</td>
+			    <td class="heIs">HTML - верстальщик</td>
 			    <td>HTML/CSS/JS Ajax (JS+PHP).</td>
 			    <td>юзабилити/psd.</td>
 			    <td>60 - 80 т.р.</td>
 		    </tr>
 		       <tr>
 
-			    <td>Программист</td>
+			    <td class="heIs">Программист</td>
 			    <td>"Рыба" сайта с CMS.</td>
 			    <td>ЯП (PHP, питон и тд, большинство написано на PHP, ASP.Nek.</td>
 			    <td>40 - ... (200 т.р. вполне вероятно).</td>
 		    </tr>
 		       <tr>
 
-			    <td>Контент - менеджер</td>
+			    <td class="heIs">Контент - менеджер</td>
 			    <td>наполненный сайт (заполняет рыбу), наименее требующая знаний специальность.</td>
 			    <td>CMS + юзабилити и граф. дизайн.</td>
 			    <td>40 - 60 т.р.</td>
 		    </tr>
 		       <tr>
 
-			    <td>Тестировщик</td>
+			    <td class="heIs">Тестировщик</td>
 			    <td>правильно работающий сайт.</td>
 			    <td>всё знает; он педант, тщательно работает.</td>
 			    <td>??</td>
 		    </tr>
 		       <tr>
 
-			    <td>PM - (progect manager)</td>
+			    <td class="heIs">PM - (progect manager)</td>
 			    <td>работа с людьми, управляет людьми; Карьерный рост.</td>
 			    <td>всё + soft skills.</td>
 			    <td>90 - ...</td>
