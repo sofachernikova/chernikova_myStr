@@ -10,10 +10,12 @@
 
 $(document).ready(function(){
 
-	// Скрыть/показать таблицу
+	// Скрыть таблицу
     $("#hide").click(function(){
         $("table").hide();
-    });
+	});
+
+	// /Показать таблицу
     $("#show").click(function(){
         $("table").show();
 	});
@@ -28,10 +30,12 @@ $(document).ready(function(){
 			$("ul.change").append("<li>Новый элемент списка</li>");
 	});
 
-	// Изменить/вернуть цвет текста (h4)
+	// Изменить цвет текста (h4)
 	$("#changeStyle").click(function(){
         $("h4").addClass("blue");
 	});
+
+	// Вернуть цвет текста (h4)
 	$("#changeStyleBack").click(function(){
         $("h4").removeClass("blue");
 	});
@@ -62,6 +66,14 @@ $(document).ready(function(){
 	$( "div" )
 	.filter( ".second" )
 		.css( "border-color", "blue" );
+	
+	// Примерение методов attr и prop
+	$( "input" ).change(function() {
+  var $input = $( this );
+  $( "#iAccept" ).html(
+    ".attr( \"checked\" ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+    "Согласие подтверждено? <b> " + $input.prop( "checked" ) + "</b>" );
+}).change();
 
 });
 
@@ -119,6 +131,10 @@ $(document).ready(function(){
 		float: left;
 		border: 2px white solid;
 	}
+
+	b {
+    color: blue;
+  }
 
 </style> <!--ВНЕДРЕННЫЙ СТИЛЬ-->
 <body>
@@ -270,6 +286,11 @@ $(document).ready(function(){
 			<div class = first></div>
 			<div class = second></div>
 			<div class = first></div>
+		</div>
+		<div style="width: 90%; margin: auto;">
+			<input id="check1" type="checkbox" checked="checked">
+			<label for="check1">Подтвердить согласие</label>
+			<h5 id="iAccept"></h5>
 		</div>
 	</body>
 </html>
