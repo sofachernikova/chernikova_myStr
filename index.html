@@ -38,7 +38,7 @@ $(document).ready(function(){
 	
 	// Изменить цвет фона абзацев
 	$("#changeColorParagraf").click(function(){
-        $("p").css("background-color", "orange");
+        $("p.firstAbz").css("background-color", "orange");
 	});
 	
 	// Add toggle class
@@ -47,7 +47,12 @@ $(document).ready(function(){
 	});
 	
 	// Поиск всех элементов <span> в абзацах <p> и их перекраска в красный цвет
-	$( "h4" ).find( "span" ).css( "color", "red" );
+	$( "h4" ).find( "span" ).css( "color", "blue" );
+
+	// Изменение цвета фона абзаца при наведении
+	$( this ).slideUp();
+
+	// 
 });
 
 </script>
@@ -55,17 +60,17 @@ $(document).ready(function(){
 </head>
 <style>
 	body {
-	margin: 0;
-	width: 100%;
-	background-image: url(img/background2.jpg),
-	                  url(img/background.jpg);
-	background-repeat: no-repeat,
-                       no-repeat;
-    background-position: center;
-                     
-	background-size: 92% 100%,
-	                 100% 100%;
-	background-attachment: fixed;
+		margin: 0;
+		width: 100%;
+		background-image: url(img/background2.jpg),
+						url(img/background.jpg);
+		background-repeat: no-repeat,
+						no-repeat;
+		background-position: center;
+						
+		background-size: 92% 100%,
+						100% 100%;
+		background-attachment: fixed;
 }
 
 	.blue {
@@ -73,11 +78,11 @@ $(document).ready(function(){
 	}
 
 	#panel, #flip {
-    padding: 5px;
-    text-align: center;
-    background-color: #e5baba;
-	border: solid 1px black;
-	margin: auto;
+		padding: 5px;
+		text-align: center;
+		background-color: #e5baba;
+		border: solid 1px black;
+		margin: auto;
 	}
 
 	#panel {
@@ -86,6 +91,15 @@ $(document).ready(function(){
 		margin: auto;
 		font: 1.6em Arial;
 	}
+
+	p.abz {
+		margin: 10px;
+		cursor: pointer;
+	}
+	p:hover {
+		background: orange;
+		transition: all 0.8s ease 0s;
+  }
 </style> <!--ВНЕДРЕННЫЙ СТИЛЬ-->
 <body>
 	<br>
@@ -207,10 +221,10 @@ $(document).ready(function(){
 		    	<a style="text-align: center;" href="tablefree.html"><h2>Ссылка на двухколончатую форму</h2></a> <!--ВСТРОЕННЫЙ СТИЛЬ-->
 		<div style="width: 90%; margin: auto;">
 			<h2 style="text-decoration: none;">Абзаци:</h2>
-			<P style="background-color: red;">Абзац 1</P>
-			<P style="background-color: yellow;">Абзац 2</P>
-			<P style="background-color: green;">Абзац 3</P>
-			<P style="background-color: blue;">Абзац 4</P>
+			<P class="firstAbz" style="background-color: red;">Абзац 1</P>
+			<P class="firstAbz" style="background-color: yellow;">Абзац 2</P>
+			<P class="firstAbz" style="background-color: green;">Абзац 3</P>
+			<P class="firstAbz" style="background-color: blue;">Абзац 4</P>
 			<button id="changeColorParagraf">Изменить фон абзацев</button>
 		</div><br>
 		<div id="flip">Кликни, чтобы увидеть мою электронную почту! (чтобы скрыть, кликни повторно)</div>
@@ -218,7 +232,11 @@ $(document).ready(function(){
 		<div style="width: 90%; margin: auto;">
 			<h2 style="text-decoration: none;">В следующем тексте есть несколько слов, выделенных тегом span. Эти слова выделены синим цветом.</h2>
 			<h4 style="width: 100%; margin: auto;">Lorem ipsum dolor sit amet consectetur <span> adipisicing </span>elit. Quidem suscipit vitae officia iure ratione iusto optio doloribus illo nemo delectus <span>illum</span>, sit architecto cum doloremque aut maiores voluptas. Beatae soluta <span>cumque</span> deserunt expedita sapiente nisi quo asperiores voluptates est eius officia dolores possimus, odio aut adipisci vitae. A veritatis tempore accusamus iste eum ipsum mollitia cumque <span>quos</span> dicta ullam. Cumque dolore magni voluptatem, porro vel necessitatibus, dolorum non sed <span>reprehenderit</span>, voluptates placeat obcaecati neque velit accusantium? Error repellat aut rem quisquam est illo quia rerum at soluta, dolorem eius veniam quo neque non incidunt perspiciatis ipsum reprehenderit cum. <span>Libero</span>, impedit?</h4>
+		</div><br><br><br><br><br><br>
+		<div style="width: 90%; margin: auto;">
+			<p class="abz">Наведи на меня курсор</p>
+			<p class="abz">Наведи на меня курсор</p>
+			<p class="abz">Наведи на меня курсор</p>
 		</div>
-			<br><br>
 	</body>
 </html>
