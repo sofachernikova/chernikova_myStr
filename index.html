@@ -57,6 +57,12 @@ $(document).ready(function(){
 
 	// Добавление чего-либо после тега (<h2 id = "letsStart">)
 	$( "#letsStart" ).after( "<em>Можешь убедиться в этом сам:)</em>" );
+
+	// Применение метода filter
+	$( "div" )
+	.filter( ".second" )
+		.css( "border-color", "blue" );
+
 });
 
 </script>
@@ -103,6 +109,15 @@ $(document).ready(function(){
 	p:hover {
 		background: orange;
 		transition: all 0.8s ease 0s;
+	}
+
+	.first, .second{
+		background-color: #e5baba;
+		width: 60px;
+		height: 60px;
+		margin: 26px;
+		float: left;
+		border: 2px white solid;
 	}
 
 </style> <!--ВНЕДРЕННЫЙ СТИЛЬ-->
@@ -242,6 +257,19 @@ $(document).ready(function(){
 			<p class="abz">Наведи на меня курсор</p>
 			<p class="abz">Наведи на меня курсор</p>
 			<p class="abz">Наведи на меня курсор</p>
+		</div>
+		<div style="width: 90%; margin: auto;">
+			<div class = first></div>
+			<div class = second></div>
+			<div class = first></div>
+			<div class = second></div>
+			<div class = second></div>
+			<div class = first></div>
+			<div class = first></div>
+			<div class = first></div>
+			<div class = first></div>
+			<div class = second></div>
+			<div class = first></div>
 		</div>
 	</body>
 </html>
